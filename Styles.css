@@ -170,13 +170,13 @@ a{
 #videoDivider{
 	margin: 0px;
 	padding: 0px;
-    background-image: url("../Images/VideoDividerBG.png");
+    background-image: url("Images/VideoDividerBG.png");
     background-size: contain;
 	height: 50px;
 }
 
 #bottomNav{
-    background-image: url("../Images/NavBarBG.png");
+    background-image: url("Images/NavBarBG.png");
     
     background-size: contain;
     background-repeat: no-repeat;
