@@ -5,16 +5,18 @@
 <meta charset="utf-8">
 <script src="p5.min.js"></script>
 <script src="Noisesketch.js"></script>
-<link href="Styles.css" rel="stylesheet" type="text/css">
+<link href="../Styles.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="https://use.typekit.net/nnv2tdn.css">
 <!-- <script src="script.js"></script> -->
-<link rel="icon" type="image/x-icon" href="/images/favicon7.png">
+<link rel="icon" type="image/x-icon" href="../Images/favicon.png">
 </head>
 
 
 <body>
-    <div id="videoContainer"></div>
-    <div id="videoDivider"></div>
+    <video id = "bgVideo" width="1920" height="1080" autoplay loop muted>
+		<source src="Videos/NoiseMotion.mp4" type="video/mp4">
+		</video>	
+	<div id="videoDivider"></div>
 
     <div id="InfoContainer">
         <div id="LeftCol">    
@@ -24,34 +26,53 @@
             
             <div class="infoBlock">
                 <div class="textBlock">
-                    <h1>NOISE</h1>
+                    <h2>What is noise?</h2>
                     
-                    <p>Interpolation is the mathematical act of creating new data from existing data. It’s sort of like interpretating. you are given some information and you can interpret things that aren’t specifically part of that information but you have enough that your best guess fills in the blanks quite well. A really simple example of interpolation would be as follows: You are given a graph with two points on it, if you drew a straight line between the two points that would be an example of linear interpolation. All the points that line crosses would be interpolated points.</p>
+                    <p>Noise is information that is random or semi random. If you’ve ever been flipping through radio stations and gotten to a channel that is just buzzing static, that’s noise. If you’ve ever been trying to change inputs on your TV and it looks like a bunch of black and white dots rapidly dancing about, that’s also noise. In both of these cases your radio and your TV are receiving information and trying to display it to you but because the information is random or improperly formatted its displayed as random sounds or shapes. There is also noise that is purposefully generated, it’s generated in such a way that it seems random, but beneath the surface there are many processes that are shaping it so that people can control how it looks.</p><p> One of the simplest ways that noise is generated for use in computer graphics is first to  generate a big grid of numbers usually from 0 to 1. With 0 being black and 1 being white and any number in-between being a shade of the two. Once you have this grid you fill each grid square with the corresponding color and then using math you can blur the image by averaging the colors together. This gets you a very simple type of noise known as “Value Noise”. More advanced forms of noise have more sophisticated blurring techniques to make the noise seem more natural and random.</p>
+                    </div>
+                    <div class="InteractiveBorder">
+                        <div id="InteractiveBlock2">
+                            <div id="NoiseDemo1"></div>
+                        </div>
+                        <p class="explainerTextWide">There are many different types of noise with different properties and looks to them. Some types of noise can by <span class="brmed">animated</span> leading to even more possibilities in their use. Can you think of any uses for these noise textures?<span class="brmed"> Click the drop down to view different types of noise.</span> </p>	
+                    </div>
+                </div>
+                <div class="SpaceMaker" style="height: 100px"></div>
+                <div class="infoBlock">
+                    
+                    <div class="textBlock">
+                        <h2>Types of Noise.</h2>
+                        <p>There are many types of noise that people can generate with different use cases. One of the most common types of noise generated is called <span class="brmed">Perlin</span>  noise. Like value noise its generated with a big grid of colors ranging from black to white. But unlike value noise these aren’t simply just numbers from 0 to 1 but vectors that also point in a certain direction, and this helps the noise to be much smoother and more naturalistic.</p><p> Another common type of noise is sometimes called <span class="brmed">Voronoi</span> noise where we look at our grid and place a bunch of random dots over it and based on how close we are to the dot determines what color or shade of black the grid is. </p>
+                    </div>
+
+                    <div class="InteractiveBorder">
+                        <div id="InteractiveBlock1">
+                            <div id="NoiseDemo2"></div>
+                        </div>
+                        <p class="explainerTextWide">Here an example of a simple type of noise known as <span class="brmed">Value  Noise.</span> Value noise is just a grid of squares where a number is generated from <span class="brmed">0 to 1</span> with <span class="brmed">0</span> being pure black, and <span class="brmed">1</span> being pure white. Click the button labeled <span class="brmed">Switch Color/Numbers</span> to view the number associated with each square or click <span class="brmed">New Noise</span> to generate a new set of numbers and therefore a new noise pattern.</p>	
+                    </div>
 
                 </div>
-                <div id="InteractiveBlock1">
-                    <div id="NoiseDemo1"></div>
-                </div>
-            </div>
 
-            <div class="infoBlock">
-                <div class="textBlock">
-                    <h1>Types of interpolation.</h1>
 
-                    <p>Like the example above the simplest form of interpolation is linear, this is just connecting the data with a straight line. The next type is a smoother version of linear interpolation called polynomial interpolation which just uses a different mathematical formula to the linear one to get a smoother result. </p>
+                <div class="SpaceMaker" style="height: 220px"></div>
 
+                <div class="infoBlock" >
+                    <div class="textBlock"style="width:60%; padding-right: 20rem;" >
+                    <h2>How Its used.</h2>
+                    <p>Noise is used all throughout computer graphics to help make things seem more realistic. The realm of computers is one of perfect ones and zeros so things made using computers are usually feel very artificial. To make things feel more real noise in the form of noise textures is added to break up the clean uniformness that a computer generates. Of course, noise textures are generated by computers so they are not completely random but they do a good enough job, and a clever enough artist can use noise textures to bring digital works to life.</p><p> Some examples of things noise textures can were shown in the video at the top of the page. By taking Perlin noise and increasing the contrast between bright and dark areas you can create convincing textures that look like clouds in the sky. By greatly increasing the contrast (or brightness or something) until there is very little white part of the noise you can create a texture that simulated film grain. In 3D graphics software you can take a flat plane and put a noise texture on it and say all the areas where it is white are raised up and all the black areas are lowered and you can create mountainous landscapes. And the possibilities are endless, if there is some natural phenomenon out there with enough creativity you could probably recreate it with noise, like ocean waves, or the scales of a lizard, or a metal panel, really anything as long as you have the proper understanding of what noise textures are and can do.</p>
+                    </div>
                 </div>
-                <div id="InteractiveBlock2">
-                    <div id="NoiseDemo2"></div>
-                </div>
-            </div>
+                <div class="SpaceMaker" style="height: 100px"></div>
+
             
-            <div class="infoBlock">
-                <div class="textBlock" style="width:100%; padding-right: 30rem;">
-                    <h1>Where its used.</h1>
-                    <p>Interpolation is mainly used for animation. Before there was interpolation if you wanted something animated you had to draw every individual frame in order to create the illusion of motion. But thanks to computers and the interpolation calculations they can perform all you need to do is set up something called keyframes and let the computer do the rest. Of course, interpolation isn’t magic. Say you want a square to move from one side of your animation to the other. If you just give it the first keyframe where it’s on one side and the last keyframe where it’s on the others, it’s not going to know that you also wanted it to do a flip in the middle. That’s where you need to go in and add some keyframes in the middle to help out the computer. Still requires some manual input but is much faster than the old way of frame by frame.</p>
-                </div>
-                </div>
+
+            
+     
+ 
+           
+            
+
 
 
         </div>
@@ -61,12 +82,13 @@
         
 
     </div>
-
+    <div id="MetalDivider"></div>
     <div id="bottomNav">
         <a style="padding-right: 42vw;" href="../BezierSite/BezierSite.html" >&#8592;PREV </a>
 		
-        <a href="../HomePage/HomePage.html" >NEXT&#8594; </a>
+        <a href="../VectorSite/vector.html" >NEXT&#8594; </a>
 	</div>
+    <div id="MetalDivider"></div>
 
 </body>
 

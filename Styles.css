@@ -41,6 +41,14 @@
     src: url(Fonts/Metropolis-SemiBold.otf);
  }
 
+
+
+ @font-face {
+
+    font-family: SpaceGroteskReg;
+    src: url(Fonts/SpaceGrotesk-Regular.ttf);
+ }
+
 html, body{ 
 	margin: 0; 
 	padding: 0;
@@ -59,19 +67,20 @@ h1{
 /* Subhead */
 h2{
     color: white;
-    font-family: t26-carbon, monospace;
-    font-size: 40px;
+    font-family: SpaceGroteskReg;
+    font-size: 50px;
     margin-left: 40px;
-    line-height: 30px;
+    /* margin-top: 70px; */
+    line-height: 43px;
 }
 
 
 /* Body Copy */
 p{
     color: white;
-    font-size: 17px;
+    font-size: 18px;
     font-family: Metropolis;
-    line-height: 30px;
+    line-height: 35px;
     margin-bottom: 0;
     padding-left: 40px;
 }
@@ -108,7 +117,7 @@ a{
     flex-direction: column;
     /* background-color: purple; */
     background: rgb(32,32,32);
-    background: linear-gradient(155deg, rgba(32,32,32,1) 17%, rgb(45, 78, 82) 100%); 
+    background: linear-gradient(155deg, rgb(20, 20, 20) 17%, rgb(44, 44, 44)100%); 
     width: 80%;
     height: auto;
     padding-top: 100px;
@@ -126,6 +135,7 @@ a{
     display: flex;
     width: 90%;
     height: auto;    
+    /* margin-bottom: 200px; */
 }
 
 .textBlock{
@@ -135,21 +145,19 @@ a{
 }
 
 #InteractiveBlock1{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid; */
-    width: 40%;
-    height: auto;
+    width: 500px;
+    height: 500px;
+    margin-top: 15px;
+    margin-left: 50px;
+    margin-bottom: 100px;
 }
 
 #InteractiveBlock2{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* border: 2px solid; */
-    width: 40%;
-    height: auto;
+    width: 500px;
+    height: 500px;
+    margin-top: 13px;
+    margin-left: 50px;
+    margin-bottom: 100px;
 }
 
 #Footer{
@@ -196,14 +204,14 @@ a{
 }
 
 #BezierDemo1{
-    height: 80%;
-    width: 80%;
+    height: 500px;
+    width: 500px;
 }
 
 
 #BezierDemo2{
-    height: 80%;
-    width: 80%;
+    height: 500px;
+    width: 500px;
 }
 
 
@@ -220,8 +228,10 @@ video#bgVideo {
 
 
 .brmed{
-    display: block;
-    margin-bottom: .9em;
+    /* display: block; */
+    /* margin-bottom: .9em; */
+    font-family: MetropolisSemiBold;
+    text-shadow: 0px 0px 2px rgb(83, 255, 255);
 }
 
 
@@ -272,6 +282,16 @@ video#bgVideo {
     padding-left: 0;
     margin-left: 0px;
     line-height: 24px;
+}
+.explainerTextWide{
+    font-family: MetropolisThin;
+    font-size: 15px;
+    padding-top: 10px;
+    /* padding-left: 50; */
+    width: 90%;
+    /* margin-left: 0px; */
+    line-height: 28px;
+    margin-bottom: 20px;
 }
 
 #movingShapeContainer{
@@ -364,11 +384,43 @@ video#bgVideo {
 /* BLEND MODE SPECIFIC CSS */
 /* BLEND MODE SPECIFIC CSS */
 #BlendDemo1{
-    width: 100%;
+    width: 500px;
     height: 500px;
 }
 #BlendDemo2{
-    width: 100%;
+    width: 500px;
     height: 500px;
 }
 /* END OF BLEND MODE SPECIFIC CSS */
+
+
+/* NOISE SPECIFIC CSS */
+/* NOISE SPECIFIC CSS */
+/* NOISE SPECIFIC CSS */
+ 
+#NoiseDemo1{
+    width: 500px;
+    height: 500px;
+}
+#NoiseDemo2{
+    width: 500px;
+    height: 500px;
+}
+/* END OF NOISE SPECIFIC CSS */
+/* END OF NOISE SPECIFIC CSS */
+/* END OF NOISE SPECIFIC CSS */
+
+ 
+
+.InteractiveBorder{
+    background-image: url("./Images/InteractiveBorderBig.png");
+    margin-top: 30px;
+    width: 600px;
+    height: 600px;
+    /* box-shadow:0 0 20px rgb(255, 255, 255); */
+}
+
+
+.SpaceMaker{
+    height: 200px;
+}
